@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kehinde Justinah Coker — Aspiring SOC Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="top" aria-label="Section navigation">
+  <div class="inner">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="status">Cybersecurity Portfolio</div>
+      <h1>Kehinde Justinah Coker</h1>
+      <div class="role">Aspiring SOC Analyst — Automation-Focused</div>
+      <p class="intro">Cybersecurity student with hands-on experience collaborating with team members in a project capacity on SOC monitoring, vulnerability management, SOAR automation, and phishing campaign analysis. Looking for a Cybersecurity Intern, SOC Analyst Intern, Junior SOC Analyst, Security Operations Intern, or Vulnerability Management Intern position to gain production experience from the foundation built by these projects.</p>
+      <div class="hero-links">
+        <a href="https://github.com/Ayomide01Elite" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/kehinde-coker-524603347" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="CV/Kehinde_Coker_Cybersecurity_CV.pdf" download>Download My CV ↓</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/kehinde-coker-cybersecurity-profile.png" alt="Cybersecurity Profile">
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-title">About</div>
+    <div class="bio">
+      <p>I'm a cybersecurity student with hands-on experience collaborating with team members in a project capacity on SOC monitoring, vulnerability management, SOAR automation, and phishing campaign analysis. I'm interested in helping automate as much of the response side of security operations as possible, not just detection. I'm looking for a Cybersecurity Intern, SOC Analyst Intern, Junior SOC Analyst, Security Operations Intern, or Vulnerability Management Intern position to gain production experience from the foundation built by these projects.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Monitoring &amp; Detection</h3>
+        <ul>
+          <li>Log review / alert triage (project-oriented)</li>
+          <li>Wazuh (Endpoint Detection &amp; Response / Open Vulnerability Assessment Language)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Vulnerability &amp; Patch Management</h3>
+        <ul>
+          <li>Patch management process implementation</li>
+          <li>CVE enumeration / CVSS score assessment</li>
+          <li>Tailscale (zero-config VPN)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Security Automation</h3>
+        <ul>
+          <li>SOAR response playbook development</li>
+          <li>DevSecOps pipeline integration security (SAST / DAST / scanner-agnostic dependency checking / secrets detection)</li>
+          <li>Parsing findings into triage / routing logic</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Social Engineering &amp; Awareness</h3>
+        <ul>
+          <li>Phishing campaign analysis and creation</li>
+          <li>Email security (SPF / DKIM / DMARC records)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Reporting &amp; GRC Exposure</h3>
+        <ul>
+          <li>Security posture assessment and reporting, with NDPR awareness</li>
+          <li>Intro-level familiarity with ISO/IEC 27001 GRC practices</li>
+        </ul>
+        <div class="skill-note">Exposure through projects and coursework — not officially certified.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-title">Featured Projects</div>
+
+    <div class="case">
+      <div class="case-top">
+        <h3>ShieldOps — DevSecOps Pipeline &amp; SOAR Automation Platform</h3>
+        <span class="tag">Expadox Labs · Team Project</span>
+      </div>
+
+      <div class="field"><div class="k">Problem</div><div class="v">Security scans typically run late — after deployment or during occasional pen tests — letting issues like hardcoded secrets and vulnerable dependencies reach production undetected.</div></div>
+      <div class="field"><div class="k">Objective</div><div class="v">Embed security scanning directly into CI/CD and automate the response to what it finds, instead of relying on manual review.</div></div>
+      <div class="field"><div class="k">Architecture &amp; Tools</div><div class="v">SAST, DAST, dependency scanning, and secrets detection run on every commit; a SOAR layer enriches each finding with CVE/CVSS data, prioritizes it, and routes it to one of three automated playbooks (exposed secret, critical CVE, confirmed OWASP Top 10 flaw). Validated against a real, intentionally vulnerable test application.</div></div>
+      <div class="field"><div class="k">My Contribution</div><div class="v">I wrote the automated response playbook for the exposed-secrets finding type — the logic that determines how that specific kind of finding is triaged and routed once the pipeline catches it.</div></div>
+      <div class="field"><div class="k">Results &amp; Limitations</div><div class="v">The team's dashboard tracks a mean-time-to-triage (MTTT) metric, reported by the team as faster than manual review.</div><div class="v note">Self-reported metric — not independently verified on this page; confirm with measured before/after data if available.</div></div>
+      <div class="field"><div class="k">Lessons Learned</div><div class="v">Writing response logic for a specific finding type (rather than just detecting it) requires thinking through false positives and escalation paths, not just the detection rule itself.</div></div>
+
+      <div class="links">
+        <a href="https://app.notion.com/p/DevSecOps-Pipeline-SOAR-Automation-Platform-3d941084cc6b809aa182c427b44debfa?source=copy_link" target="_blank" rel="noopener">ShieldOps documentation (Notion) ↗</a>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-top">
+        <h3>Endpoint Protection &amp; Vulnerability Management Program</h3>
+        <span class="tag">Team Project</span>
+      </div>
+
+      <div class="field"><div class="k">Problem</div><div class="v">Starting point was zero visibility: no vulnerability scans had been run, patching was manual and untracked, and there was no endpoint detection capability.</div></div>
+      <div class="field"><div class="k">Objective</div><div class="v">Stand up endpoint visibility, vulnerability scanning, and a managed patch process from scratch.</div></div>
+      <div class="field"><div class="k">Architecture &amp; Tools</div><div class="v">Tailscale for secure connectivity across managed endpoints, Wazuh for EDR and vulnerability scanning, Action1 for centralized patch management with a documented SLA policy.</div></div>
+      <div class="field"><div class="k">My Contribution</div><div class="v">I worked with my team on endpoint agent deployment, the patch management policy rollout, and documenting remediation progress transparently as it stood.</div></div>
+      <div class="field"><div class="k">Results &amp; Limitations</div><div class="v">The initial scan surfaced a large critical-severity backlog on the Ubuntu host. A patch deployment policy was configured and a patch cycle run, but a post-patch re-scan had not yet been captured at reporting time, so critical/high counts in the report still reflect the original baseline.</div></div>
+      <div class="field"><div class="k">Lessons Learned</div><div class="v">Reporting remediation status honestly — including what's unconfirmed — matters as much as the remediation itself for a credible security program.</div></div>
+
+      <div class="links">
+        <a href="https://app.notion.com/p/Endpoint-Protection-Vulnerability-Management-Program-3c141084cc6b8093960ad7d96602a0c9?source=copy_link" target="_blank" rel="noopener">Endpoint Protection documentation (Notion) ↗</a>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-top">
+        <h3>Security Monitoring, Analytics, and Response Executive Report</h3>
+        <span class="tag">Team Project</span>
+      </div>
+
+      <div class="field"><div class="k">Problem</div><div class="v">Prompted by a ransomware attack on a direct industry competitor that began through an unpatched machine with remote access exposed to the internet, demanding $2.3 million. Our team had the same blind spots: no asset inventory, no patch visibility, no monitoring.</div></div>
+      <div class="field"><div class="k">Objective</div><div class="v">Assess and document our own security posture, and the gaps that left us exposed to the same kind of attack.</div></div>
+      <div class="field"><div class="k">My Contribution</div><div class="v">I helped assess the security posture and document the findings and response in this report.</div></div>
+      <div class="field"><div class="k">Results &amp; Limitations</div><div class="v">The report documents what the team found and the work undertaken in response, as a point-in-time executive summary rather than a completed remediation.</div></div>
+
+      <div class="links">
+        <a href="https://app.notion.com/p/Security-Monitoring-and-Management-Executive-Report-3c341084cc6b80acab61eb17e7eae85f?source=copy_link" target="_blank" rel="noopener">Executive report (Notion) ↗</a>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-top">
+        <h3>School-wide Phishing Attack Analysis &amp; Student Guidance Report</h3>
+        <span class="tag">Capstone Project · She Code Africa</span>
+      </div>
+
+      <div class="field"><div class="k">Problem</div><div class="v">Students are a high-risk, understudied demographic for phishing in the Nigerian context, despite heavy reliance on email and digital platforms.</div></div>
+      <div class="field"><div class="k">Objective</div><div class="v">Run a controlled phishing simulation to measure susceptibility, identify the technical and psychological indicators at play, and produce practical awareness guidance.</div></div>
+      <div class="field"><div class="k">Architecture &amp; Tools</div><div class="v">A fake "EduSupport Foundation" scholarship email and landing page, built to exploit authority, scarcity, and social proof; sent to 25 participants via a controlled Slack channel. Simulated form data only — no real personal or financial information was collected or retained.</div></div>
+      <div class="field"><div class="k">My Contribution</div><div class="v">My task on the team was awareness creation — translating the simulation's findings into practical, plain-language phishing-awareness guidance for students.</div></div>
+      <div class="field"><div class="k">Results &amp; Limitations</div><div class="v">Of 25 emails sent, 21 were opened (84%), 19 clicked the link (76% of those sent), and 15 submitted simulated sensitive data (60% of those sent). The team cross-checked the link with VirusTotal and found only 1 of several security vendors flagged it as phishing, underscoring that user awareness matters alongside technical detection. The study proposes a layered defense — awareness training, SPF/DKIM/DMARC email authentication, and a GRC approach aligned with NDPR and ISO/IEC 27001 — as recommendations, not implemented or certified controls.</div></div>
+      <div class="field"><div class="k">Lessons Learned</div><div class="v">Several participants who clicked the link stopped short of submitting data once asked for financial details — suggesting awareness can kick in mid-interaction, not just at first contact, which shaped how the awareness guide was written.</div></div>
+
+      <div class="links">
+        <a href="https://github.com/Yeva04/sca-group2-project.git" target="_blank" rel="noopener">Team GitHub repository ↗</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="education">
+    <div class="section-title">Education &amp; Training</div>
+    <div class="case">
+      <div class="case-top">
+        <h3>Ekiti State University, Ado-Ekiti, Nigeria</h3>
+      </div>
+      <div class="field"><div class="v">Bachelor of Science (B.Sc.) in Microbiology</div></div>
+      <div class="field"><div class="k">Expected Graduation</div><div class="v">September 2026</div></div>
+      <div class="field"><div class="k">Relevant Academic Background</div><div class="v">Microbiology, laboratory practices, microbial identification, and microbiological analysis.</div></div>
+    </div>
+    <div class="case">
+      <div class="case-top">
+        <h3>Training &amp; Development</h3>
+      </div>
+      <div class="field"><div class="v">She Code Africa — Cybersecurity Program (2026): completed a group capstone project, Phishing Attack Simulation &amp; Analysis (Social Engineering / Email Security).</div></div>
+      <div class="field"><div class="v">Expadox Lab — cybersecurity project team (ShieldOps DevSecOps Pipeline &amp; SOAR Automation Platform).</div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">Contact</div>
+    <div class="contact-grid">
+      <a class="link-card" href="https://github.com/Ayomide01Elite" target="_blank" rel="noopener">
+        <div class="label">GitHub</div>
+        <div class="sub">github.com/Ayomide01Elite</div>
+      </a>
+      <a class="link-card" href="https://www.linkedin.com/in/kehinde-coker-524603347" target="_blank" rel="noopener">
+        <div class="label">LinkedIn</div>
+        <div class="sub">linkedin.com/in/kehinde-coker</div>
+      </a>
+      <a class="link-card" href="mailto:cokerkehinde745@gmail.com">
+        <div class="label">Email</div>
+        <div class="sub">cokerkehinde745@gmail.com</div>
+      </a>
+      <a class="link-card" href="CV/Kehinde_Coker_Cybersecurity_CV.pdf" download>
+        <div class="label">CV (PDF)</div>
+        <div class="sub">Kehinde_Coker_Cybersecurity_CV.pdf</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>Reviewed &amp; Updated · October 2026</footer>
+
+</div>
+</body>
+</html>
